@@ -237,6 +237,68 @@ main {
     font-weight: 500;
 }
 
+/* Plant list: subtle emphasis on scientific names */
+.prose .plant-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.prose .plant-list li {
+    margin-bottom: var(--space-sm);
+}
+
+.prose .plant-list li::before {
+    content: "· ";
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Inhabitant blocks (tank overview) */
+.inhabitant-block {
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inhabitant-block:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.inhabitant-block h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 var(--space-xs);
+    letter-spacing: 0.02em;
+}
+
+.inhabitant-block .scientific {
+    font-size: 0.9375rem;
+    color: var(--accent);
+    margin: 0 0 var(--space-sm);
+    font-style: italic;
+}
+
+.inhabitant-block .spec-dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.25rem 1.5rem;
+    margin: var(--space-sm) 0 0;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.inhabitant-block .spec-dl dt {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.inhabitant-block .spec-dl dd {
+    margin: 0;
+}
+
 /* --- Footer --- */
 .site-footer {
     padding: var(--space-md);
