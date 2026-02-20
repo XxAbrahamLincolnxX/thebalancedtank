@@ -299,6 +299,72 @@ main {
     margin: 0;
 }
 
+/* --- Tabs (Inhabitants page) --- */
+.tabs-wrap {
+    padding: 0 var(--space-md) var(--space-xl);
+}
+
+.tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: var(--space-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tab-btn {
+    padding: var(--space-sm) var(--space-md);
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    color: var(--text-muted);
+    font-family: var(--font);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: var(--text);
+}
+
+.tab-btn--active,
+.tab-btn[aria-selected="true"] {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.tab-panel {
+    padding: 0;
+}
+
+.tab-panel.prose h2 {
+    margin-top: 0;
+}
+
+.tab-panel.prose h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: var(--space-md) 0 var(--space-xs);
+    letter-spacing: 0.02em;
+}
+
+.tab-panel.prose h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: var(--space-sm) 0 var(--space-xs);
+}
+
+.tab-panel .scientific {
+    font-size: 0.9375rem;
+    color: var(--accent);
+    margin: 0 0 var(--space-md);
+    font-style: italic;
+}
+
 /* --- Footer --- */
 .site-footer {
     padding: var(--space-md);
