@@ -299,6 +299,82 @@ main {
     margin: 0;
 }
 
+/* --- Reference images --- */
+.ref-grid {
+    display: grid;
+    gap: var(--space-md);
+    margin: var(--space-md) 0;
+}
+
+.ref-grid--plants {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+}
+
+.ref-grid--two {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.ref-fig {
+    margin: 0;
+}
+
+.ref-fig--top {
+    margin-bottom: var(--space-md);
+}
+
+.ref-fig--inline {
+    float: right;
+    max-width: 220px;
+    margin-left: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 480px) {
+    .ref-fig--inline {
+        float: none;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: var(--space-md);
+    }
+}
+
+.ref-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.ref-fig figcaption {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+    line-height: 1.4;
+}
+
+.prose .ref-fig figcaption {
+    margin-bottom: 0;
+}
+
+.prose-credit {
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.prose-credit a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.prose-credit a:hover {
+    text-decoration: underline;
+}
+
 /* --- Tabs (Inhabitants page) --- */
 .tabs-wrap {
     padding: 0 var(--space-md) var(--space-xl);
