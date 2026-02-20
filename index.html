@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="The Balanced Tank — a minimal look at my aquarium: what's in the tank and how it all works together.">
+    <title>The Balanced Tank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <header class="site-header">
+        <a href="index.html" class="site-name">The Balanced Tank</a>
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="tank-overview.html">Tank Overview</a>
+            <a href="inhabitants.html">Inhabitants</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <!-- Replace with your own image: <img src="images/hero-tank.jpg" alt="Full tank view"> -->
+                <div class="hero-placeholder" aria-hidden="true"></div>
+                <h1 class="hero-title">The Balanced Tank</h1>
+                <p class="hero-tagline">A peek inside the tank — what lives here and how it all works together.</p>
+            </div>
+        </section>
+
+        <section class="intro content-width">
+            <p class="intro-lead">This site is a quick tour for family and friends: the fish, plants, and critters in the tank, and how they depend on each other.</p>
+            <a href="tank-overview.html" class="btn">See what’s in the tank</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>The Balanced Tank</p>
+    </footer>
 </body>
 </html>
