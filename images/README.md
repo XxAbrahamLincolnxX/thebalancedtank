@@ -1,17 +1,14 @@
 # Tank reference images
 
-Add your own photos here to use as reference images on the site.
+Reference images for plants and inhabitants are loaded from **Wikimedia Commons** at a uniform 400px width. Only two optional local files are used if present:
 
-## Suggested filenames (used on Tank Overview)
+## Optional (Tank Overview will show these if you add them)
 
-- `sagittaria-subulata.jpg` — *Sagittaria subulata*
-- `hottonia-palustris.jpg` — *Hottonia palustris*
-- `vallisneria-natans.jpg` — *Vallisneria americana* 'Natans'
 - `lilaeopsis-brasiliensis.jpg` — *Lilaeopsis brasiliensis*
-- `java-fern.jpg` — *Leptochilus pteropus* (Java fern)
-- `red-root-floaters.jpg` — *Phyllanthus fluitans*
-- `taiwan-moss.jpg` — *Taxiphyllum alternans* 'Taiwan Moss'
-- `hygrophila-siamensis.jpg` — *Hygrophila corymbosa* 'Siamensis'
-- `hero-tank.jpg` — optional full-tank hero image for the home page
+- `red-root-floaters.jpg` — *Phyllanthus fluitans* (red root floaters)
 
-Shrimp, fish, snail, and Anubias reference images are loaded from Wikimedia Commons; no local files needed for those.
+## Optional hero image
+
+- `hero-tank.jpg` — full-tank hero image for the home page (replace the gradient placeholder in `index.html`)
+
+All other plant and animal reference images (Anubias, Sagittaria, Hottonia, Vallisneria, Java fern, Taiwan moss, Hygrophila, shrimp, Otocinclus, Kubotai rasbora, Ramshorn snail) are served from Commons; no local copies needed.
