@@ -1,7 +1,7 @@
 /* --- Variables --- */
 :root {
-    --bg: rgb(26, 22, 50);
-    --bg-soft: rgba(40, 36, 70, 0.6);
+    --bg: rgb(29, 28, 34);
+    --bg-soft: rgba(93, 182, 96, 0.6);
     --text: rgb(240, 238, 235);
     --text-muted: rgba(240, 238, 235, 0.7);
     --accent: rgb(72, 187, 180);
