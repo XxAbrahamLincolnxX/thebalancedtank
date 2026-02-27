@@ -2,8 +2,8 @@
 :root {
     --bg: rgb(192, 192, 192);
     --bg-soft: rgba(93, 182, 96, 0.6);
-    --text: rgb(240, 238, 235);
-    --text-muted: rgba(240, 238, 235, 0.7);
+    --text: rgb(53, 53, 85);
+    --text-muted: rgba(63, 49, 27, 0.7);
     --accent: rgb(72, 187, 180);
     --accent-hover: rgb(95, 210, 202);
     --font: "Outfit", system-ui, sans-serif;
