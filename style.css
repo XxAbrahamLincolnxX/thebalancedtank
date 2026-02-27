@@ -3,6 +3,7 @@
     --bg: #313638;
     --bg-gradient: linear-gradient(-45deg,rgb(15, 26, 15) 0%, rgb(11, 18, 26) 100%);
     --bg-soft:rgb(70, 92, 105, 0.5);
+    --card-bg:rgb(21, 21, 27);
     --text: #FFE787;
     --text-muted: #FFFFFF;
     --accent: #FF6663;
@@ -46,6 +47,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.card {
+    background-color: var(--card-bg);
+    padding: 1rem;
+}
 
 
 .status {
