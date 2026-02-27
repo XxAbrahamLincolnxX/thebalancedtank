@@ -1,6 +1,6 @@
 /* --- Variables --- */
 :root {
-    --bg: rgb(29, 28, 34);
+    --bg: rgb(192, 192, 192);
     --bg-soft: rgba(93, 182, 96, 0.6);
     --text: rgb(240, 238, 235);
     --text-muted: rgba(240, 238, 235, 0.7);
