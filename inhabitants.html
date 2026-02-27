@@ -29,7 +29,7 @@
       Skip to content
     </a>
 
-    <!-- Header (as requested) -->
+    <!-- Header -->
     <header class="border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur sticky top-0">
       <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
         <a
@@ -82,11 +82,7 @@
 
       <section class="rounded-2xl border border-zinc-800/80 bg-zinc-950 p-5 shadow-sm">
         <!-- Tabs -->
-        <div
-          class="flex flex-wrap gap-2"
-          role="tablist"
-          aria-label="Inhabitant categories"
-        >
+        <div class="flex flex-wrap gap-2" role="tablist" aria-label="Inhabitant categories">
           <button
             type="button"
             class="tab-btn inline-flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm font-semibold text-zinc-200 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
@@ -121,30 +117,35 @@
 
         <!-- Panels -->
         <div class="mt-5">
+          <!--
+            CONSISTENT IMAGE SIZING NOTES
+            - All "sidebar" images (shrimp/snails) use the same fixed aspect ratio + fixed width column.
+            - All fish grid images use the same fixed aspect ratio + fixed height.
+            - object-cover ensures cropping (not stretching) for consistency.
+          -->
+
           <!-- SHRIMP -->
-          <section
-            class="tab-panel"
-            id="panel-shrimp"
-            role="tabpanel"
-            aria-labelledby="tab-shrimp"
-          >
+          <section class="tab-panel" id="panel-shrimp" role="tabpanel" aria-labelledby="tab-shrimp">
             <div class="grid gap-6 lg:grid-cols-[240px_1fr]">
-              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
-                <img
-                  class="h-full w-full object-cover"
-                  src="/images/cherry-shrimp.JPG"
-                  alt="Neocaridina davidi red cherry shrimp"
-                  loading="lazy"
-                />
-                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800">
+                <!-- Fixed aspect ratio wrapper keeps height consistent -->
+                <div class="aspect-[4/5] w-full bg-zinc-900">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/images/cherry-shrimp.JPG"
+                    alt="Neocaridina davidi red cherry shrimp"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption
+                  class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400"
+                >
                   Reference: <em class="text-zinc-200">Neocaridina davidi</em> (cherry shrimp)
                 </figcaption>
               </figure>
 
               <div>
-                <h2 class="text-xl font-semibold tracking-tight text-zinc-100">
-                  Neocaridina shrimp
-                </h2>
+                <h2 class="text-xl font-semibold tracking-tight text-zinc-100">Neocaridina shrimp</h2>
                 <p class="mt-1 text-sm text-zinc-400"><em>Neocaridina davidi</em></p>
 
                 <div class="mt-5 space-y-6">
@@ -231,14 +232,19 @@
             hidden
           >
             <div class="grid gap-6 lg:grid-cols-[240px_1fr]">
-              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
-                <img
-                  class="h-full w-full object-cover"
-                  src="/images/ramshorn.jpg"
-                  alt="Ramshorn snail Planorbella"
-                  loading="lazy"
-                />
-                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800">
+                <!-- Same fixed aspect ratio wrapper as Shrimp -->
+                <div class="aspect-[4/5] w-full bg-zinc-900">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/images/ramshorn.jpg"
+                    alt="Ramshorn snail Planorbella"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption
+                  class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400"
+                >
                   Reference: <span class="text-zinc-200">Planorbidae</span> (Ramshorn snail)
                 </figcaption>
               </figure>
@@ -339,26 +345,36 @@
             </p>
 
             <div class="mt-5 grid gap-4 sm:grid-cols-2">
-              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
-                <img
-                  class="h-56 w-full object-cover"
-                  src="/images/otocinclus-square.jpg"
-                  alt="Otocinclus affinis"
-                  loading="lazy"
-                />
-                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800">
+                <!-- Fixed aspect ratio wrapper to match the other fish card -->
+                <div class="aspect-[4/3] w-full bg-zinc-900">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/images/otocinclus-square.jpg"
+                    alt="Otocinclus affinis"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption
+                  class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400"
+                >
                   Reference: <em class="text-zinc-200">Otocinclus</em> spp.
                 </figcaption>
               </figure>
 
               <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
-                <img
-                  class="h-56 w-full object-cover"
-                  src="/images/kubotai rasbora.jpg"
-                  alt="Microdevario kubotai green rasbora"
-                  loading="lazy"
-                />
-                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+                <!-- Same fixed aspect ratio wrapper -->
+                <div class="aspect-[4/3] w-full bg-zinc-900">
+                  <img
+                    class="h-full w-full object-cover"
+                    src="/images/kubotai rasbora.jpg"
+                    alt="Microdevario kubotai green rasbora"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption
+                  class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400"
+                >
                   Reference: <em class="text-zinc-200">Microdevario kubotai</em>
                 </figcaption>
               </figure>
@@ -474,7 +490,7 @@
       </section>
     </main>
 
-    <!-- Footer (as requested) -->
+    <!-- Footer -->
     <footer class="border-t border-zinc-800/80 sticky bottom-0 bg-zinc-950/70 backdrop-blur">
       <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
         <p class="text-sm text-zinc-400">The Balanced Tank</p>
