@@ -1,7 +1,7 @@
 /* --- Variables --- */
 :root {
     --bg: #313638;
-    --bg-gradient: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(21, 60, 115, 1) 100%);
+    --bg-gradient: linear-gradient(-45deg,rgb(15, 26, 15) 0%, rgb(11, 18, 26) 100%);
     --bg-soft:rgb(70, 92, 105, 0.5);
     --text: #FFE787;
     --text-muted: #FFFFFF;
@@ -27,6 +27,7 @@
     box-sizing: border-box;
 }
 
+
 body {
     background-image: var(--bg-gradient);
     color: var(--text);
@@ -38,7 +39,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
+} 
+
 
 h1 {
     text-transform: uppercase;
