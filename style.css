@@ -1,12 +1,13 @@
 /* --- Variables --- */
 :root {
-    --bg: rgb(192, 192, 192);
-    --bg-soft: rgba(93, 182, 96, 0.6);
-    --text: rgb(53, 53, 85);
-    --text-muted: rgba(63, 49, 27, 0.7);
-    --accent: rgb(72, 187, 180);
-    --accent-hover: rgb(95, 210, 202);
+    --bg: #313638;
+    --bg-soft: #465c69;
+    --text: #FFE787;
+    --text-muted: #FFFFFF;
+    --accent: #FF6663;
+    --accent-hover: #64B6AC;
     --font: "Outfit", system-ui, sans-serif;
+    --font-title: "Roboto";
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -37,6 +38,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+h1 {
+    text-transform: uppercase;
+}
+
+
 
 .status {
     min-width:10px;
@@ -139,10 +146,12 @@ main {
 
 .hero-title {
     font-size: clamp(2rem, 5vw, 2.75rem);
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
     margin: 0 0 var(--space-sm);
     color: var(--text);
+    font-family: var(--font-title);
 }
 
 .hero-tagline {
