@@ -1,73 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Why the nitrogen cycle matters, cycling your tank before adding fish, and testing water regularly for a healthy aquarium.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Why the nitrogen cycle matters, cycling your tank before adding fish, and testing water regularly for a healthy aquarium."
+    />
     <title>Nitrogen Cycle & Tank Basics — The Balanced Tank</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="site-header">
-        <a href="index.html" class="site-name">The Balanced Tank</a>
-        <nav class="site-nav">
-            <a href="index.html">Home</a>
-            <a href="nitrogen-cycle.html">Nitrogen Cycle</a>
-            <a href="tank-overview.html">Tank Overview</a>
-            <a href="inhabitants.html">Inhabitants</a>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind build output -->
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-zinc-900 focus:px-3 focus:py-2 focus:text-sm focus:ring-2 focus:ring-amber-500"
+    >
+      Skip to content
+    </a>
+
+    <!-- Header (as requested) -->
+    <header class="border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur sticky top-0">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+        <a
+          href="index.html"
+          class="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-sm font-semibold tracking-wide text-zinc-100 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          aria-label="The Balanced Tank — Home"
+        >
+          <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+          The Balanced Tank
+        </a>
+
+        <nav class="flex flex-wrap items-center gap-1 text-sm" aria-label="Primary navigation">
+          <a
+            href="index.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Home</a
+          >
+          <a
+            href="nitrogen-cycle.html"
+            aria-current="page"
+            class="rounded-lg bg-zinc-900 px-3 py-2 text-zinc-100 ring-1 ring-zinc-700/70 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Nitrogen Cycle</a
+          >
+          <a
+            href="tank-overview.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Tank Overview</a
+          >
+          <a
+            href="inhabitants.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Inhabitants</a
+          >
         </nav>
+      </div>
     </header>
 
-    <main>
-        <header class="page-header content-width">
-            <h1>The Nitrogen Cycle & Tank Basics</h1>
-            <p class="page-lead">A healthy aquarium depends on the nitrogen cycle, setting up the environment before adding life, and testing the water regularly.</p>
-        </header>
+    <main id="main" class="mx-auto max-w-5xl px-4 py-10 pb-24">
+      <!-- Page header -->
+      <header class="mb-6">
+        <p class="text-xs font-medium uppercase tracking-[0.2em] text-amber-400/90">
+          Tank fundamentals
+        </p>
+        <h1 class="mt-2 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
+          The Nitrogen Cycle &amp; Tank Basics
+        </h1>
+        <p class="mt-3 max-w-3xl text-base leading-relaxed text-zinc-300">
+          A healthy aquarium depends on the nitrogen cycle, setting up the environment before
+          adding life, and testing the water regularly.
+        </p>
+      </header>
 
-        <article class="prose content-width">
-            <section class="prose-section">
-                <h2>What is the nitrogen cycle?</h2>
-                <p>In a closed aquarium, fish waste, uneaten food, and plant matter produce <strong>ammonia</strong>, which is toxic to fish. The nitrogen cycle is the process that turns that ammonia into less harmful compounds.</p>
-                <p>Beneficial bacteria that grow in the filter and on surfaces in the tank do the work:</p>
-                <ol>
-                    <li><strong>Ammonia</strong> (NH₃) — from waste and decay — is converted to <strong>nitrite</strong> (NO₂⁻) by one group of bacteria.</li>
-                    <li><strong>Nitrite</strong> is still toxic. A second group of bacteria converts it to <strong>nitrate</strong> (NO₃⁻).</li>
-                    <li><strong>Nitrate</strong> is much less harmful at low levels. You keep it in check with regular water changes and, in planted tanks, plants use some of it as fertilizer.</li>
-                </ol>
-                <p>Until these bacteria colonies are established, ammonia and nitrite can spike and harm or kill fish. That’s why “cycling” the tank before adding livestock is so important.</p>
-            </section>
+      <!-- Content card -->
+      <article class="rounded-2xl border border-zinc-800/80 bg-zinc-950 p-6 shadow-sm">
+        <div class="space-y-8">
+          <!-- Section 1 -->
+          <section>
+            <div class="flex items-start justify-between gap-4">
+              <h2 class="text-lg font-semibold tracking-tight text-zinc-100">
+                What is the nitrogen cycle?
+              </h2>
+              <span
+                class="inline-flex items-center rounded-full border border-amber-400/30 bg-amber-500/10 px-2.5 py-1 text-xs font-medium text-amber-300"
+                >core concept</span
+              >
+            </div>
 
-            <section class="prose-section">
-                <h2>Set up the environment before adding living creatures</h2>
-                <p>Adding fish or other animals to a brand‑new tank is risky. The filter and surfaces don’t yet have enough beneficial bacteria to handle waste, so ammonia and nitrite can rise quickly and poison the inhabitants.</p>
-                <p><strong>Cycling</strong> means running the tank (with a source of ammonia, such as a small amount of fish food or pure ammonia) for several weeks so that:</p>
-                <ul>
-                    <li>Bacteria that convert ammonia → nitrite can grow.</li>
-                    <li>Bacteria that convert nitrite → nitrate can grow.</li>
-                    <li>You see ammonia and nitrite rise, then fall to zero (or near zero), with nitrate present — that’s when the cycle is established.</li>
-                </ul>
-                <p>Only after the cycle is complete and you’ve confirmed with a test kit should you add fish or other livestock. Doing this first keeps the environment safe and reduces stress and loss.</p>
-            </section>
+            <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+              In a closed aquarium, fish waste, uneaten food, and plant matter produce
+              <span class="font-semibold text-zinc-100">ammonia</span>, which is toxic to fish. The
+              nitrogen cycle is the process that turns that ammonia into less harmful compounds.
+            </p>
 
-            <section class="prose-section">
-                <h2>Test the water regularly</h2>
-                <p>Even in a cycled tank, things can change: overfeeding, new fish, or a filter problem can cause ammonia or nitrite to appear again. Regular testing lets you catch problems early and keep the environment as healthy as possible.</p>
-                <p>Test at least:</p>
-                <ul>
-                    <li><strong>Ammonia</strong> — should be 0 (or undetectable).</li>
-                    <li><strong>Nitrite</strong> — should be 0 (or undetectable).</li>
-                    <li><strong>Nitrate</strong> — keep it low (e.g. under 20–40 ppm depending on stock); water changes are the main way to reduce it.</li>
-                </ul>
-                <p>During cycling, test every few days so you can see the cycle progress. In an established tank, testing weekly (or after any change) is a good habit. A simple liquid test kit is accurate and lasts a long time — it’s one of the best investments for your tank’s health.</p>
-            </section>
-        </article>
+            <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+              Beneficial bacteria that grow in the filter and on surfaces in the tank do the work:
+            </p>
+
+            <ol class="mt-4 space-y-3">
+              <li class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-sm text-zinc-300">
+                  <span class="font-semibold text-zinc-100">Ammonia</span>
+                  <span class="text-zinc-400">(NH₃)</span> — from waste and decay — is converted to
+                  <span class="font-semibold text-zinc-100">nitrite</span>
+                  <span class="text-zinc-400">(NO₂⁻)</span> by one group of bacteria.
+                </p>
+              </li>
+              <li class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-sm text-zinc-300">
+                  <span class="font-semibold text-zinc-100">Nitrite</span> is still toxic. A second
+                  group of bacteria converts it to <span class="font-semibold text-zinc-100">nitrate</span>
+                  <span class="text-zinc-400">(NO₃⁻)</span>.
+                </p>
+              </li>
+              <li class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-sm text-zinc-300">
+                  <span class="font-semibold text-zinc-100">Nitrate</span> is much less harmful at
+                  low levels. You keep it in check with regular water changes and, in planted
+                  tanks, plants use some of it as fertilizer.
+                </p>
+              </li>
+            </ol>
+
+            <div class="mt-4 rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+              <p class="text-sm leading-relaxed text-zinc-300">
+                Until these bacteria colonies are established, ammonia and nitrite can spike and
+                harm or kill fish. That’s why “cycling” the tank before adding livestock is so
+                important.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 2 -->
+          <section>
+            <h2 class="text-lg font-semibold tracking-tight text-zinc-100">
+              Set up the environment before adding living creatures
+            </h2>
+
+            <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+              Adding fish or other animals to a brand-new tank is risky. The filter and surfaces
+              don’t yet have enough beneficial bacteria to handle waste, so ammonia and nitrite can
+              rise quickly and poison the inhabitants.
+            </p>
+
+            <div class="mt-4 rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+              <p class="text-sm leading-relaxed text-zinc-300">
+                <span class="font-semibold text-zinc-100">Cycling</span> means running the tank
+                (with a source of ammonia, such as a small amount of fish food or pure ammonia) for
+                several weeks so that:
+              </p>
+
+              <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                <li class="flex gap-3 rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                  <span class="mt-0.5 h-2 w-2 flex-none rounded-full bg-amber-500"></span>
+                  Bacteria that convert ammonia → nitrite can grow.
+                </li>
+                <li class="flex gap-3 rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                  <span class="mt-0.5 h-2 w-2 flex-none rounded-full bg-amber-500"></span>
+                  Bacteria that convert nitrite → nitrate can grow.
+                </li>
+                <li class="flex gap-3 rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                  <span class="mt-0.5 h-2 w-2 flex-none rounded-full bg-amber-500"></span>
+                  You see ammonia and nitrite rise, then fall to zero (or near zero), with nitrate
+                  present — that’s when the cycle is established.
+                </li>
+              </ul>
+            </div>
+
+            <p class="mt-4 text-sm leading-relaxed text-zinc-300">
+              Only after the cycle is complete and you’ve confirmed with a test kit should you add
+              fish or other livestock. Doing this first keeps the environment safe and reduces
+              stress and loss.
+            </p>
+          </section>
+
+          <!-- Section 3 -->
+          <section>
+            <h2 class="text-lg font-semibold tracking-tight text-zinc-100">Test the water regularly</h2>
+
+            <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+              Even in a cycled tank, things can change: overfeeding, new fish, or a filter problem
+              can cause ammonia or nitrite to appear again. Regular testing lets you catch problems
+              early and keep the environment as healthy as possible.
+            </p>
+
+            <div class="mt-4 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">Ammonia</p>
+                <p class="mt-2 text-sm text-zinc-200">
+                  Should be <span class="font-semibold text-zinc-100">0</span> (undetectable).
+                </p>
+              </div>
+              <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">Nitrite</p>
+                <p class="mt-2 text-sm text-zinc-200">
+                  Should be <span class="font-semibold text-zinc-100">0</span> (undetectable).
+                </p>
+              </div>
+              <div class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <p class="text-xs font-medium uppercase tracking-[0.2em] text-zinc-500">Nitrate</p>
+                <p class="mt-2 text-sm text-zinc-200">
+                  Keep it low (often <span class="font-semibold text-zinc-100">20–40 ppm</span>);
+                  water changes reduce it.
+                </p>
+              </div>
+            </div>
+
+            <p class="mt-4 text-sm leading-relaxed text-zinc-300">
+              During cycling, test every few days so you can see progress. In an established tank,
+              testing weekly (or after any change) is a good habit. A simple liquid test kit is
+              accurate and lasts a long time — it’s one of the best investments for your tank’s
+              health.
+            </p>
+          </section>
+        </div>
+      </article>
     </main>
 
-    <footer class="site-footer">
-        <p>The Balanced Tank</p>
+    <!-- Footer (as requested) -->
+    <footer class="border-t border-zinc-800/80 sticky bottom-0 bg-zinc-950/70 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+        <p class="text-sm text-zinc-400">The Balanced Tank</p>
+        <a
+          href="#main"
+          class="rounded text-sm text-zinc-400 underline decoration-zinc-700 underline-offset-4 hover:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          >Back to top</a
+        >
+      </div>
     </footer>
-</body>
+  </body>
 </html>

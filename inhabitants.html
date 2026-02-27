@@ -1,183 +1,530 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Detailed care for tank inhabitants: shrimp, snails, and fish — habitat, food, and behavior.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed care for tank inhabitants: shrimp, snails, and fish — habitat, food, and behavior."
+    />
     <title>Inhabitants — The Balanced Tank</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="site-header">
-        <a href="index.html" class="site-name">The Balanced Tank</a>
-        <nav class="site-nav">
-            <a href="index.html">Home</a>
-            <a href="nitrogen-cycle.html">Nitrogen Cycle</a>
-            <a href="tank-overview.html">Tank Overview</a>
-            <a href="inhabitants.html">Inhabitants</a>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind build output -->
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+
+  <body class="min-h-screen bg-zinc-950 text-zinc-100 antialiased">
+    <!-- Skip link -->
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-zinc-900 focus:px-3 focus:py-2 focus:text-sm focus:ring-2 focus:ring-amber-500"
+    >
+      Skip to content
+    </a>
+
+    <!-- Header (as requested) -->
+    <header class="border-b border-zinc-800/80 bg-zinc-950/70 backdrop-blur sticky top-0">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+        <a
+          href="index.html"
+          class="inline-flex items-center gap-2 rounded-lg px-2 py-1 text-sm font-semibold tracking-wide text-zinc-100 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+          aria-label="The Balanced Tank — Home"
+        >
+          <span class="h-2 w-2 rounded-full bg-amber-500"></span>
+          The Balanced Tank
+        </a>
+
+        <nav class="flex flex-wrap items-center gap-1 text-sm" aria-label="Primary navigation">
+          <a
+            href="index.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Home</a
+          >
+          <a
+            href="nitrogen-cycle.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Nitrogen Cycle</a
+          >
+          <a
+            href="tank-overview.html"
+            class="rounded-lg px-3 py-2 text-zinc-300 hover:bg-zinc-900 hover:text-zinc-100 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Tank Overview</a
+          >
+          <a
+            href="inhabitants.html"
+            aria-current="page"
+            class="rounded-lg bg-zinc-900 px-3 py-2 text-zinc-100 ring-1 ring-zinc-700/70 hover:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            >Inhabitants</a
+          >
         </nav>
+      </div>
     </header>
 
-    <main>
-        <header class="page-header content-width">
-            <h1>Inhabitants</h1>
-            <p class="page-lead">Detailed care for the shrimp, snails, and fish in the tank — habitat, food, and what to expect.</p>
-        </header>
+    <main id="main" class="mx-auto max-w-5xl px-4 py-10 pb-24">
+      <!-- Page header -->
+      <header class="mb-6">
+        <p class="text-xs font-medium uppercase tracking-[0.2em] text-amber-400/90">Care notes</p>
+        <h1 class="mt-2 text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">
+          Inhabitants
+        </h1>
+        <p class="mt-3 max-w-3xl text-base leading-relaxed text-zinc-300">
+          Detailed care for the shrimp, snails, and fish in the tank — habitat, food, and what to
+          expect.
+        </p>
+      </header>
 
-        <div class="content-width tabs-wrap">
-            <div class="tabs" role="tablist" aria-label="Inhabitant categories">
-                <button type="button" class="tab-btn" role="tab" aria-selected="true" aria-controls="panel-shrimp" id="tab-shrimp">Shrimp</button>
-                <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-snails" id="tab-snails">Snails</button>
-                <button type="button" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-fish" id="tab-fish">Fish</button>
+      <section class="rounded-2xl border border-zinc-800/80 bg-zinc-950 p-5 shadow-sm">
+        <!-- Tabs -->
+        <div
+          class="flex flex-wrap gap-2"
+          role="tablist"
+          aria-label="Inhabitant categories"
+        >
+          <button
+            type="button"
+            class="tab-btn inline-flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm font-semibold text-zinc-200 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-shrimp"
+            id="tab-shrimp"
+          >
+            Shrimp
+          </button>
+          <button
+            type="button"
+            class="tab-btn inline-flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm font-semibold text-zinc-200 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-snails"
+            id="tab-snails"
+          >
+            Snails
+          </button>
+          <button
+            type="button"
+            class="tab-btn inline-flex items-center justify-center rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-2 text-sm font-semibold text-zinc-200 hover:bg-zinc-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-fish"
+            id="tab-fish"
+          >
+            Fish
+          </button>
+        </div>
+
+        <!-- Panels -->
+        <div class="mt-5">
+          <!-- SHRIMP -->
+          <section
+            class="tab-panel"
+            id="panel-shrimp"
+            role="tabpanel"
+            aria-labelledby="tab-shrimp"
+          >
+            <div class="grid gap-6 lg:grid-cols-[240px_1fr]">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Neocaridina-heteropoda-var-red.jpg/400px-Neocaridina-heteropoda-var-red.jpg"
+                  alt="Neocaridina davidi red cherry shrimp"
+                  loading="lazy"
+                />
+                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+                  Reference: <em class="text-zinc-200">Neocaridina davidi</em> (cherry shrimp)
+                </figcaption>
+              </figure>
+
+              <div>
+                <h2 class="text-xl font-semibold tracking-tight text-zinc-100">
+                  Neocaridina shrimp
+                </h2>
+                <p class="mt-1 text-sm text-zinc-400"><em>Neocaridina davidi</em></p>
+
+                <div class="mt-5 space-y-6">
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Habitat
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      Neocaridina shrimp do best in stable, planted tanks with plenty of surfaces to
+                      graze and hide. They like gentle flow and avoid strong currents.
+                    </p>
+
+                    <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Temperature:</span> 18–29 °C (64–84
+                        °F); mid-70s °F is ideal.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">pH:</span> 6.5–8.0. Avoid sudden
+                        swings.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Hardness:</span> Moderate (e.g. 4–12
+                        dGH). They need minerals for molting.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Tank setup:</span> Plants, moss, and
+                        driftwood give cover and biofilm. They use the bottom and mid levels and
+                        appreciate hiding spots after molting.
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Food
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      They are omnivores and graze constantly on biofilm and algae. Supplement with:
+                    </p>
+
+                    <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Quality shrimp pellets or sinking wafers (once daily or every other day,
+                        small amount).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Blanched vegetables (e.g. zucchini, spinach, cucumber) a few times a week;
+                        remove uneaten pieces.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Optional: occasional frozen foods (e.g. daphnia, brine shrimp) for variety.
+                      </li>
+                    </ul>
+
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+                      In a mature planted tank they will also eat algae and decaying plant matter.
+                      Avoid overfeeding to keep water clean.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Behavior &amp; care
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      They are peaceful and can be kept with small, non-aggressive fish and snails.
+                      Keep them in a group (e.g. 10+); they’re more confident and active in numbers.
+                      Different color forms interbreed if mixed. They molt regularly; empty molts
+                      left in the tank are normal and can be left for them to eat for minerals.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SNAILS -->
+          <section
+            class="tab-panel"
+            id="panel-snails"
+            role="tabpanel"
+            aria-labelledby="tab-snails"
+            hidden
+          >
+            <div class="grid gap-6 lg:grid-cols-[240px_1fr]">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+                <img
+                  class="h-full w-full object-cover"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Planorbella_trivolvis.jpg/400px-Planorbella_trivolvis.jpg"
+                  alt="Ramshorn snail Planorbella"
+                  loading="lazy"
+                />
+                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+                  Reference: <span class="text-zinc-200">Planorbidae</span> (Ramshorn snail)
+                </figcaption>
+              </figure>
+
+              <div>
+                <h2 class="text-xl font-semibold tracking-tight text-zinc-100">Ramshorn snails</h2>
+                <p class="mt-1 text-sm text-zinc-400">
+                  Planorbidae (e.g. <em>Planorbella</em> spp.)
+                </p>
+
+                <div class="mt-5 space-y-6">
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Habitat
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      Ramshorn snails are very adaptable and do well in most community setups. They
+                      climb glass, plants, and decor and graze on surfaces.
+                    </p>
+
+                    <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Temperature:</span> Comfortable in
+                        typical tropical range (e.g. 20–28 °C / 68–82 °F).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">pH:</span> Prefer neutral to slightly
+                        alkaline (around 7.0–8.0) for strong shells.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Hardness:</span> Adequate calcium (GH)
+                        is important for shell health; very soft water can lead to thin or pitted shells.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Tank setup:</span> No special requirements.
+                        They use all areas — glass, substrate, plants, and driftwood.
+                      </li>
+                    </ul>
+                  </section>
+
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Food
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      They are scavengers and algae grazers. They will eat:
+                    </p>
+
+                    <ul class="mt-3 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Soft algae on glass, plants, and decor.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Leftover fish and shrimp food, decaying plant matter, and detritus.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Blanched vegetables (zucchini, cucumber, spinach) if you want to supplement.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Optional: sinking pellets or algae wafers occasionally.
+                      </li>
+                    </ul>
+
+                    <p class="mt-3 text-sm leading-relaxed text-zinc-300">
+                      In a well-fed community tank they often need no dedicated feeding. Overfeeding
+                      is the main cause of population booms — reduce excess food to keep numbers in
+                      check.
+                    </p>
+                  </section>
+
+                  <section>
+                    <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Behavior &amp; care
+                    </h3>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      They are peaceful and harmless to plants (they may graze on dying leaves). They
+                      reproduce readily and lay small clutches of eggs on glass and plants. To limit
+                      population: avoid overfeeding, remove egg clutches if desired, and keep tank
+                      clean. They are useful clean-up crew and help break down waste.
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- FISH -->
+          <section
+            class="tab-panel"
+            id="panel-fish"
+            role="tabpanel"
+            aria-labelledby="tab-fish"
+            hidden
+          >
+            <h2 class="text-xl font-semibold tracking-tight text-zinc-100">Fish</h2>
+            <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+              Two species share the tank: Otocinclus (bottom) and Kubotai green rasboras (mid-water).
+            </p>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+                <img
+                  class="h-56 w-full object-cover"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Otocinclus_affinis.JPG/400px-Otocinclus_affinis.JPG"
+                  alt="Otocinclus affinis"
+                  loading="lazy"
+                />
+                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+                  Reference: <em class="text-zinc-200">Otocinclus</em> spp.
+                </figcaption>
+              </figure>
+
+              <figure class="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
+                <img
+                  class="h-56 w-full object-cover"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Microdevario_kubotai-hires.jpg/400px-Microdevario_kubotai-hires.jpg"
+                  alt="Microdevario kubotai green rasbora"
+                  loading="lazy"
+                />
+                <figcaption class="border-t border-zinc-800 bg-zinc-950/60 p-3 text-xs text-zinc-400">
+                  Reference: <em class="text-zinc-200">Microdevario kubotai</em>
+                </figcaption>
+              </figure>
             </div>
 
-            <section class="tab-panel prose" id="panel-shrimp" role="tabpanel" aria-labelledby="tab-shrimp">
-                <figure class="ref-fig ref-fig--top">
-                    <img class="ref-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Neocaridina-heteropoda-var-red.jpg/400px-Neocaridina-heteropoda-var-red.jpg" alt="Neocaridina davidi red cherry shrimp" loading="lazy">
-                    <figcaption>Reference: <em>Neocaridina davidi</em> (cherry shrimp)</figcaption>
-                </figure>
-                <h2>Neocaridina shrimp</h2>
-                <p class="scientific"><em>Neocaridina davidi</em></p>
+            <div class="mt-6 grid gap-4 lg:grid-cols-2">
+              <!-- OTO -->
+              <section class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <h3 class="text-base font-semibold text-zinc-100">
+                  Otocinclus <span class="text-zinc-400"><em>Otocinclus</em> spp.</span>
+                </h3>
 
-                <h3>Habitat</h3>
-                <p>Neocaridina shrimp do best in stable, planted tanks with plenty of surfaces to graze and hide. They like gentle flow and avoid strong currents.</p>
-                <ul>
-                    <li><strong>Temperature:</strong> 18–29 °C (64–84 °F); mid-70s °F is ideal.</li>
-                    <li><strong>pH:</strong> 6.5–8.0. Avoid sudden swings.</li>
-                    <li><strong>Hardness:</strong> Moderate (e.g. 4–12 dGH). They need minerals for molting.</li>
-                    <li><strong>Tank setup:</strong> Plants, moss, and driftwood give cover and biofilm. They use the bottom and mid levels and appreciate hiding spots after molting.</li>
-                </ul>
+                <div class="mt-4 space-y-5">
+                  <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Habitat
+                    </h4>
+                    <ul class="mt-2 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Temperature:</span> 22–26 °C (72–79 °F).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">pH:</span> 6.0–7.5. Stable, mature tanks are best.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Hardness:</span> Soft to moderate (e.g. 2–12 dGH).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Tank setup:</span> Needs algae/biofilm; mature planted tank
+                        with driftwood is ideal. Gentle flow; avoid strong currents. Keep in a group (e.g. 6+).
+                      </li>
+                    </ul>
+                  </div>
 
-                <h3>Food</h3>
-                <p>They are omnivores and graze constantly on biofilm and algae. Supplement with:</p>
-                <ul>
-                    <li>Quality shrimp pellets or sinking wafers (once daily or every other day, small amount).</li>
-                    <li>Blanched vegetables (e.g. zucchini, spinach, cucumber) a few times a week; remove uneaten pieces.</li>
-                    <li>Optional: occasional frozen foods (e.g. daphnia, brine shrimp) for variety.</li>
-                </ul>
-                <p>In a mature planted tank they will also eat algae and decaying plant matter. Avoid overfeeding to keep water clean.</p>
-
-                <h3>Behavior & care</h3>
-                <p>They are peaceful and can be kept with small, non-aggressive fish and snails. Keep them in a group (e.g. 10+); they are more confident and active in numbers. Different color forms (cherry, blue, yellow, etc.) are the same species and will interbreed if mixed. They molt regularly; empty molts left in the tank are normal and can be left for them to eat for minerals.</p>
-            </section>
-
-            <section class="tab-panel prose" id="panel-snails" role="tabpanel" aria-labelledby="tab-snails" hidden>
-                <figure class="ref-fig ref-fig--top">
-                    <img class="ref-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Planorbella_trivolvis.jpg/400px-Planorbella_trivolvis.jpg" alt="Ramshorn snail Planorbella" loading="lazy">
-                    <figcaption>Reference: Planorbidae (Ramshorn snail)</figcaption>
-                </figure>
-                <h2>Ramshorn snails</h2>
-                <p class="scientific">Planorbidae (e.g. <em>Planorbella</em> spp.)</p>
-
-                <h3>Habitat</h3>
-                <p>Ramshorn snails are very adaptable and do well in most community setups. They climb glass, plants, and decor and graze on surfaces.</p>
-                <ul>
-                    <li><strong>Temperature:</strong> Comfortable in typical tropical range (e.g. 20–28 °C / 68–82 °F).</li>
-                    <li><strong>pH:</strong> Prefer neutral to slightly alkaline (around 7.0–8.0) for strong shells.</li>
-                    <li><strong>Hardness:</strong> Adequate calcium (GH) is important for shell health; very soft water can lead to thin or pitted shells.</li>
-                    <li><strong>Tank setup:</strong> No special requirements. They use all areas — glass, substrate, plants, and driftwood.</li>
-                </ul>
-
-                <h3>Food</h3>
-                <p>They are scavengers and algae grazers. They will eat:</p>
-                <ul>
-                    <li>Soft algae on glass, plants, and decor.</li>
-                    <li>Leftover fish and shrimp food, decaying plant matter, and detritus.</li>
-                    <li>Blanched vegetables (zucchini, cucumber, spinach) if you want to supplement.</li>
-                    <li>Optional: sinking pellets or algae wafers occasionally.</li>
-                </ul>
-                <p>In a well-fed community tank they often need no dedicated feeding. Overfeeding is the main cause of population booms — reduce excess food to keep numbers in check.</p>
-
-                <h3>Behavior & care</h3>
-                <p>They are peaceful and harmless to plants (they may graze on dying leaves). They reproduce readily and lay small clutches of eggs on glass and plants. To limit population: avoid overfeeding, remove egg clutches if desired, and keep tank clean. They are useful clean-up crew and help break down waste.</p>
-            </section>
-
-            <section class="tab-panel prose" id="panel-fish" role="tabpanel" aria-labelledby="tab-fish" hidden>
-                <h2>Fish</h2>
-                <p>Two species share the tank: Otocinclus (bottom) and Kubotai green rasboras (mid-water).</p>
-                <div class="ref-grid ref-grid--two">
-                    <figure class="ref-fig">
-                        <img class="ref-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Otocinclus_affinis.JPG/400px-Otocinclus_affinis.JPG" alt="Otocinclus affinis" loading="lazy">
-                        <figcaption>Reference: <em>Otocinclus</em> spp.</figcaption>
-                    </figure>
-                    <figure class="ref-fig">
-                        <img class="ref-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Microdevario_kubotai-hires.jpg/400px-Microdevario_kubotai-hires.jpg" alt="Microdevario kubotai green rasbora" loading="lazy">
-                        <figcaption>Reference: <em>Microdevario kubotai</em></figcaption>
-                    </figure>
+                  <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Food
+                    </h4>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      Algae and biofilm grazers. In a new or very clean tank there may not be enough natural food, so supplement with:
+                    </p>
+                    <ul class="mt-2 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Blanched vegetables (zucchini, cucumber, spinach) — leave in for a few hours.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Algae wafers or sinking pellets with vegetable content.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Repashy Soilent Green (or similar gel foods) if available.
+                      </li>
+                    </ul>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      If the tank has little algae, offer supplemental foods regularly. Peaceful and safe with shrimp and snails.
+                    </p>
+                  </div>
                 </div>
-                <h3>Otocinclus <em>Otocinclus</em> spp.</h3>
-                <h4>Habitat</h4>
-                <ul>
-                    <li><strong>Temperature:</strong> 22–26 °C (72–79 °F).</li>
-                    <li><strong>pH:</strong> 6.0–7.5. Stable, mature tanks are best.</li>
-                    <li><strong>Hardness:</strong> Soft to moderate (e.g. 2–12 dGH).</li>
-                    <li><strong>Tank setup:</strong> They need algae and biofilm; a mature, planted tank with driftwood and some algae growth is ideal. Gentle flow; avoid strong currents. Keep in a group (e.g. 6+).</li>
-                </ul>
-                <h4>Food</h4>
-                <p>They are algae and biofilm grazers. In a new or very clean tank there may not be enough natural food, so supplement with:</p>
-                <ul>
-                    <li>Blanched vegetables (zucchini, cucumber, spinach) — leave in for a few hours.</li>
-                    <li>Algae wafers or sinking pellets with vegetable content.</li>
-                    <li>Repashy Soilent Green or similar gel foods if available.</li>
-                </ul>
-                <p>They graze throughout the day. If they are constantly on the glass or plants, they are feeding; if the tank has little algae, offer supplemental foods regularly. They are peaceful and safe with shrimp and snails.</p>
+              </section>
 
-                <h3>Kubotai green rasbora <em>Microdevario kubotai</em></h3>
-                <h4>Habitat</h4>
-                <ul>
-                    <li><strong>Temperature:</strong> 22–28 °C (72–82 °F).</li>
-                    <li><strong>pH:</strong> 6.0–7.5. Soft to moderate water preferred.</li>
-                    <li><strong>Tank setup:</strong> Planted tank with open mid-water swimming space and some cover. They school; keep at least 8–10, preferably more. Gentle to moderate flow.</li>
-                </ul>
-                <h4>Food</h4>
-                <p>They are omnivores and accept a wide range of foods:</p>
-                <ul>
-                    <li>Small pellets or micro pellets, and fine flakes (once or twice daily, small pinch).</li>
-                    <li>Frozen foods: daphnia, brine shrimp, cyclops — good for variety and color.</li>
-                    <li>They feed in the mid-water; ensure food reaches them and doesn’t all get taken by bottom feeders. Sinking pellets are fine if they catch them as they fall.</li>
-                </ul>
-                <p>They are peaceful schooling fish and do not bother shrimp or snails when well fed. They are most active and colorful in a group.</p>
-            </section>
+              <!-- KUBOTAI -->
+              <section class="rounded-2xl border border-zinc-800 bg-zinc-950 p-4">
+                <h3 class="text-base font-semibold text-zinc-100">
+                  Kubotai green rasbora
+                  <span class="text-zinc-400"><em>Microdevario kubotai</em></span>
+                </h3>
+
+                <div class="mt-4 space-y-5">
+                  <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Habitat
+                    </h4>
+                    <ul class="mt-2 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Temperature:</span> 22–28 °C (72–82 °F).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">pH:</span> 6.0–7.5. Soft to moderate water preferred.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        <span class="font-medium text-zinc-100">Tank setup:</span> Planted tank with open mid-water space and cover.
+                        Schooling; keep at least 8–10 (preferably more). Gentle to moderate flow.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-200">
+                      Food
+                    </h4>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      Omnivores that accept a wide range of foods:
+                    </p>
+                    <ul class="mt-2 space-y-2 text-sm text-zinc-300">
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Small pellets/micro pellets and fine flakes (once or twice daily, small pinch).
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        Frozen foods: daphnia, brine shrimp, cyclops — great for variety and color.
+                      </li>
+                      <li class="rounded-xl border border-zinc-800 bg-zinc-950 p-3">
+                        They feed mid-water; sinking pellets are fine if they catch them as they fall.
+                      </li>
+                    </ul>
+                    <p class="mt-2 text-sm leading-relaxed text-zinc-300">
+                      Peaceful schooling fish; don’t bother shrimp or snails when well fed. Most active and colorful in a group.
+                    </p>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
         </div>
+      </section>
     </main>
 
-    <footer class="site-footer">
-        <p>The Balanced Tank</p>
+    <!-- Footer (as requested) -->
+    <footer class="border-t border-zinc-800/80 sticky bottom-0 bg-zinc-950/70 backdrop-blur">
+      <div class="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4">
+        <p class="text-sm text-zinc-400">The Balanced Tank</p>
+        <a
+          href="#main"
+          class="text-sm text-zinc-400 underline decoration-zinc-700 underline-offset-4 hover:text-zinc-200 focus:outline-none focus:ring-2 focus:ring-amber-500 rounded"
+          >Back to top</a
+        >
+      </div>
     </footer>
 
     <script>
-        (function () {
-            var tabList = document.querySelector('.tabs');
-            var buttons = document.querySelectorAll('.tab-btn');
-            var panels = document.querySelectorAll('.tab-panel');
+      (function () {
+        var buttons = document.querySelectorAll(".tab-btn");
+        var panels = document.querySelectorAll(".tab-panel");
 
-            function showPanel(id) {
-                var target = document.getElementById(id);
-                if (!target) return;
-                panels.forEach(function (p) {
-                    p.hidden = (p.id !== id);
-                });
-                buttons.forEach(function (b) {
-                    var selected = b.getAttribute('aria-controls') === id;
-                    b.setAttribute('aria-selected', selected);
-                    b.classList.toggle('tab-btn--active', selected);
-                });
+        function showPanel(id) {
+          var target = document.getElementById(id);
+          if (!target) return;
+
+          panels.forEach(function (p) {
+            p.hidden = p.id !== id;
+          });
+
+          buttons.forEach(function (b) {
+            var selected = b.getAttribute("aria-controls") === id;
+            b.setAttribute("aria-selected", selected ? "true" : "false");
+
+            // Tailwind "active" look
+            if (selected) {
+              b.classList.add("bg-zinc-900", "text-zinc-100", "ring-1", "ring-zinc-700/70");
+              b.classList.remove("text-zinc-200");
+            } else {
+              b.classList.remove("bg-zinc-900", "text-zinc-100", "ring-1", "ring-zinc-700/70");
+              b.classList.add("text-zinc-200");
             }
+          });
+        }
 
-            buttons.forEach(function (btn) {
-                btn.addEventListener('click', function () {
-                    showPanel(btn.getAttribute('aria-controls'));
-                });
-            });
+        buttons.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            showPanel(btn.getAttribute("aria-controls"));
+          });
+        });
 
-            // Set initial active state on first tab
-            if (buttons.length) {
-                buttons[0].classList.add('tab-btn--active');
-            }
-        })();
+        // initial state
+        if (buttons.length) {
+          showPanel(buttons[0].getAttribute("aria-controls"));
+        }
+      })();
     </script>
-</body>
+  </body>
 </html>
