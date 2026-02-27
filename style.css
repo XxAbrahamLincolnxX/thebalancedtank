@@ -1,7 +1,8 @@
 /* --- Variables --- */
 :root {
     --bg: #313638;
-    --bg-soft: #465c69;
+    --bg-gradient: linear-gradient(0deg,rgba(0, 0, 0, 1) 0%, rgba(21, 60, 115, 1) 100%);
+    --bg-soft:rgb(70, 92, 105, 0.5);
     --text: #FFE787;
     --text-muted: #FFFFFF;
     --accent: #FF6663;
@@ -27,7 +28,7 @@
 }
 
 body {
-    background-color: var(--bg);
+    background-image: var(--bg-gradient);
     color: var(--text);
     font-family: var(--font);
     font-weight: 400;
@@ -72,6 +73,8 @@ h4 {
     top: 0;
     z-index: 10;
     height: var(--header-height);
+    shadow: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0 var(--space-md);
     display: flex;
     align-items: center;
